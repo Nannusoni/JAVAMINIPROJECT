@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-//Car Loan calculator
+//Basic Loan calculator
 public class CarLoan {
   public static void main(String[] args) {
     Scanner Loan = new Scanner(System.in);
@@ -34,6 +34,6 @@ public class CarLoan {
       int monthlyPayment = monthlyBalance + interest;
       System.out.println("You have to pay monthly Loan Amount : " + monthlyPayment);
     }
-
+    Loan.close();
   }
 }
