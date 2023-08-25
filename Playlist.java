@@ -1,34 +1,22 @@
-import java.util.ArrayList;
-//project :Desert Island Playlist
-class Playlist {
+// Importing the Random library
+import java.util.Random;
+
+class LuckyFive {
   
   public static void main(String[] args) {
-  ArrayList<String> desertIslandPlaylist =  new ArrayList<String>();
+    
+    // Creating a random number generator
+    Random randomGenerator = new Random();
+    
+    // Generate a number between 1 and 6
+    int dieRoll = randomGenerator.nextInt(100) + 1;
 
-  // adding songs to playlist 
-  desertIslandPlaylist.add("Radhe-Krishna");
-  desertIslandPlaylist.add("Radha-Ram");
-  desertIslandPlaylist.add("jay Shriram");
-  desertIslandPlaylist.add("Radha-Ranchi");
-  desertIslandPlaylist.add("Radha-Mohan"); 
-  desertIslandPlaylist.add("O Palan hare"); 
-  System.out.println(desertIslandPlaylist);
-  System.out.println(desertIslandPlaylist.size());
-  desertIslandPlaylist.remove("O Palan hare"); 
-  System.out.println(desertIslandPlaylist.size());
-  System.out.println(desertIslandPlaylist);
-
-  //choosing song index no. to swap
-  int indexA = desertIslandPlaylist.indexOf("Radha-Ram");
-  int indexB = desertIslandPlaylist.indexOf("Radha-Mohan");
-//Create a new String variable called tempA and initialize it with the value of song a.
-  String tempA = "Radha-Ram";
-
-  //song swap
-
-  desertIslandPlaylist.set(indexA,"Radha-Mohan"); 
-   desertIslandPlaylist.set(indexB,"Radha-Ram"); 
-  System.out.println(desertIslandPlaylist);
+    // Repeat while roll isn't 5
+    while(dieRoll!=100){
+      System.out.println(dieRoll);
+      dieRoll = randomGenerator.nextInt(100) + 1;
+    }
+    
   }
   
 }
